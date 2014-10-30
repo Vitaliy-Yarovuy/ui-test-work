@@ -1,0 +1,13 @@
+.form-horizontal.form-groups-bordered.css-form(novalidate, ng-form="form")
+  .form-group
+    label.col-sm-3.control-label(for='firstName') імя
+    .col-sm-5
+      input#firstName.form-control(type='text', placeholder='імя', ng-model='user.persona.firstName', required='true')
+  .form-group
+    label.col-sm-3.control-label(for='lastName') прізвище
+    .col-sm-5
+      input#lastName.form-control(type='text', placeholder='Прізвище', ng-model='user.persona.lastName', required='true')
+  .form-group
+    label.col-sm-3.control-label(for='middleName') по батькові
+    .col-sm-5
+      input#middleName.form-control(type='text', placeholder='по батькові', ng-model='user.persona.middleName', required='true')

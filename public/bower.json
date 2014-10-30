@@ -1,0 +1,27 @@
+{
+  "name": "ui-test-work",
+  "version": "0.0.0",
+  "authors": [
+    "Vitaliy <vitaliy.yxz@gmail.com>"
+  ],
+  "description": "test work",
+  "keywords": [
+    "test"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.0",
+    "angular-bootstrap": "~0.11.2",
+    "bootstrap": "~3.2.0",
+    "angular-ui-router": "~0.2.11",
+    "angular-ui-select": "~0.8.3",
+    "angular-sanitize": "~1.3.0"
+  }
+}

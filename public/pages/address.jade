@@ -1,0 +1,29 @@
+.form-horizontal.form-groups-bordered.css-form(novalidate, ng-form="form")
+  .form-group
+    label.col-sm-3.control-label(for='country') країна
+    .col-sm-5
+      ui-select#country(ng-model="user.address.country", theme="selectize", ng-disabled="disabled", required="true")
+        ui-select-match(placeholder="Виберіть країну з списку") {{$select.selected.name}}
+        ui-select-choices( repeat="country in countries | filter: $select.search")
+          span(ng-bind-html="country.name | highlight: $select.search")
+          //small(ng-bind-html="country.code | highlight: $select.search")
+  .form-group
+    label.col-sm-3.control-label(for='town') місто
+    .col-sm-5
+      ui-select#town(ng-model="user.address.town", theme="selectize", ng-disabled="disabled", required="true")
+        ui-select-match(placeholder="Виберіть місто з списку") {{$select.selected.name}}
+        ui-select-choices( repeat="town in towns | filter: $select.search")
+          span(ng-bind-html="town.name | highlight: $select.search")
+          //small(ng-bind-html="country.code | highlight: $select.search")
+  .form-group
+    label.col-sm-3.control-label(for='town') вулиця
+    .col-sm-5
+      ui-select#town(ng-model="user.address.street", theme="selectize", ng-disabled="disabled", required="true")
+        ui-select-match(placeholder="Виберіть вулицю з списку") {{$select.selected.name}}
+        ui-select-choices( repeat="street in streets | filter: $select.search")
+          span(ng-bind-html="street.name | highlight: $select.search")
+          //small(ng-bind-html="country.code | highlight: $select.search")
+  .form-group
+    label.col-sm-3.control-label(for='houseNum') номер будинку
+    .col-sm-5
+      input#houseNum.form-control(type='text', placeholder='номер будинку', ng-model='user.address.houseNum', required='true')
